@@ -20,7 +20,6 @@ crossVal <- train(as.factor(hospitalisation) ~.,
 pred_train <- predict(crossVal, newdata = train)
 
 #Run a model using all features on the test dataset.
-crossValSettings <- trainControl(method = "repeatedcv", number = 100, savePredictions = TRUE)
 crossVal <- train(as.factor(hospitalisation) ~., 
                   data = test, 
                   family = "binomial", 
